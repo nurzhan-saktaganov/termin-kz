@@ -11,7 +11,7 @@ __author__ = 'Nurzhan Saktaganov'
 def main():
     templates_path, render_path, filename = 'j2template', 'static_site', 'index.html'
     file_loader = FileSystemLoader(templates_path)
-    env = Environment(loader=file_loader)
+    env = Environment(loader=file_loader, autoescape=True)
     template = env.get_template('{}.j2'.format(filename))
 
     if not os.path.exists(render_path):
