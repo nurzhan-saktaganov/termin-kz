@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Termin.kz</title>
+</head>
+<body>
+{% for termin in termins %}
+        <li>
+            {{termin.en}} - {{termin.ru}} - {{termin.kz}}
+        </li>
+{% endfor %}
+</body>
+</html>
