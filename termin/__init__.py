@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 from .db_termins import termins as db_termins
+from .db_sources import sources as db_sources
 
 
 __author__ = 'Nurzhan Saktaganov'
@@ -39,3 +40,4 @@ def termins_to_dict():
     } for t in db_termins]
 
 termins = termins_to_dict()
+sources = db_sources

@@ -2,4 +2,4 @@
 /venv
 *.code-workspace
 __pycache__
-/j2template_rendered
+/static_site

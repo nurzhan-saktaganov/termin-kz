@@ -9,7 +9,7 @@ __author__ = 'Nurzhan Saktaganov'
 
 
 def main():
-    templates_path, render_path, filename = 'j2template', 'j2template_rendered', 'index.html'
+    templates_path, render_path, filename = 'j2template', 'static_site', 'index.html'
     file_loader = FileSystemLoader(templates_path)
     env = Environment(loader=file_loader)
     template = env.get_template('{}.j2'.format(filename))
@@ -21,7 +21,7 @@ def main():
             if exc.errno != errno.EEXIST:
                 raise
 
-    output = template.render(termins=termin.termins)
+    output = template.render(termins=termin.termins, sources=termin.sources)
     with open('{}/{}'.format(render_path, filename), 'w') as f:
         f.write(output)
 
