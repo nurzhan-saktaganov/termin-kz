@@ -21,14 +21,14 @@
         </tr>
     </thead>
     <tbody>
-    {% for termin in termins %}
+    {%- for termin in termins %}
         <tr>
             <td>{{termin.source}}</td>
             <td>{{termin.en}}</td>
             <td>{{termin.ru}}</td>
             <td>{{termin.kz}}</td>
         </tr>
-    {% endfor %}
+    {%- endfor %}
     </tbody>
 </table>
 
@@ -41,13 +41,13 @@
         </tr>
     </thead>
     <tbody>
-    {% for key, value in sources.items() %}
+    {%- for key, value in sources.items() %}
         <tr id="source-{{key}}">
             <td>{{key}}</td>
             <td><a title="{{value.description}}" href="{{value.link}}">{{value.name}}</a></td>
             <td><a href="./source/{{value.localname}}">(mirror)</a></td>
         </tr>
-    {% endfor %}
+    {%- endfor %}
     </tbody>
 </table>
 </body>
