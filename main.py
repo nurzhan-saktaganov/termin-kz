@@ -27,8 +27,5 @@ def main():
 
     return
 
-    for t in termin.termins:
-        print (termin.translation(t, termin.language_kz))
-
 if __name__ == '__main__':
     main()
